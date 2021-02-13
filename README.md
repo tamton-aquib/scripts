@@ -6,10 +6,13 @@
 ```sh
 curl -s "https://raw.githubusercontent.com/tamton-aquib/shell-scripts/main/install_vim.sh" > install.sh && bash install.sh && rm install.sh
 ```
-Current Plugins: 
+<details>
+<summary>Current Plugins:<summary>
+<br>
 * vim-closetag
 * vim-floaterm
 * onedark theme
 * fzf-vim
 * vim-polyglot
 * auto-pairs
+</details>
