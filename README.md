@@ -7,7 +7,7 @@
 curl -s "https://raw.githubusercontent.com/tamton-aquib/shell-scripts/main/install_vim.sh" > install.sh && bash install.sh && rm install.sh
 ```
 <details>
-<summary>Current Plugins:<summary>
+<summary>Current Plugins:</summary>
 <ul>
 <li>* vim-closetag</li>
 <li>* vim-floaterm</li>
