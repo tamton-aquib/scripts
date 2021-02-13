@@ -8,11 +8,12 @@ curl -s "https://raw.githubusercontent.com/tamton-aquib/shell-scripts/main/insta
 ```
 <details>
 <summary>Current Plugins:<summary>
-<br>
-* vim-closetag
-* vim-floaterm
-* onedark theme
-* fzf-vim
-* vim-polyglot
-* auto-pairs
+<ul>
+<li>* vim-closetag</li>
+<li>* vim-floaterm</li>
+<li>* onedark theme</li>
+<li>* fzf-vim</li>
+<li>* vim-polyglot</li>
+<li>* auto-pairs</li>
+</ul>
 </details>
