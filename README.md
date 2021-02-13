@@ -1,6 +1,6 @@
 # Some shell scripts I regularly use.
 
-## Get my virmc:
+### Get my virmc:
 
 To set up my vimrc on ur machine, do this one-liner (or you can manually download install.sh and execute it)
 ```sh
@@ -17,3 +17,9 @@ curl -s "https://raw.githubusercontent.com/tamton-aquib/shell-scripts/main/insta
 <li> auto-pairs</li>
 </ul>
 </details>
+
+
+### Other scripts:
+
+* yeet.sh is for github add, commit and push. (Its a dumb script actually)
+* my_ip.sh is for showing ur private and public ips.
