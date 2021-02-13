@@ -1,6 +1,6 @@
-## Some shell scripts I regularly use.
+# Some shell scripts I regularly use.
 
-### Get my virmc:
+## Get my virmc:
 
 To set up my vimrc on ur machine, do this one-liner (or you can manually download install.sh and execute it)
 ```sh
