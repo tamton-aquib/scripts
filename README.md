@@ -1,4 +1,4 @@
-# Some shell scripts I regularly use.
+# Some scripts I use.
 
 ### Get my virmc:
 
