@@ -24,3 +24,4 @@ curl -s "https://raw.githubusercontent.com/tamton-aquib/shell-scripts/main/insta
 * `yeet.sh` is for github add, commit and push. (Its a dumb script actually.)
 * `my_ip.sh` is for showing ur private and public ips.
 * `unicode_arrows.py` prints some unicode arrow characters (Sometimes i use it for terminal customization).
+* `wifi.sh` for connecting to wifi via command line. (fish version)
