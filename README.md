@@ -25,3 +25,4 @@ curl -s "https://raw.githubusercontent.com/tamton-aquib/shell-scripts/main/insta
 * `my_ip.sh` is for showing ur private and public ips.
 * `unicode_arrows.py` prints some unicode arrow characters (Sometimes i use it for terminal customization).
 * `wifi.sh` for connecting to wifi via command line. (fish version)
+* `imgur_upload.py` for uploading image to imgur and get corresponding link.
