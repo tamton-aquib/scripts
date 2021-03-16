@@ -42,8 +42,10 @@ then
   echo -e "${G}Downloading complete.${E}"
   echo
   echo "Opening up vim and setting up plugins....."
+  echo "Plugin Setup complete."
   sleep 3
   vim -c ":PlugInstall"
+  echo "colorscheme sonokai" >> ~/.vimrc
 
 #### NVIM ####
 elif [[ "$VIM_VERSION" == "nvim" ]]
@@ -73,6 +75,7 @@ then
   nvim -c "echo 'Installing Plugins(Usually takes below 30s.)' | :PlugInstall"
 
   echo -e "${G}Setup Complete.${E}"
+  echo "colorscheme sonokai" >> ~/.config/nvim/init.vim
 
 
 
