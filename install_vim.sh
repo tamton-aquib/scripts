@@ -38,7 +38,7 @@ then
   sleep 1
   echo "Downloading contents and settings from github....[18.5KB]"
   sleep 2
-  curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/init.vim" > ~/.vimrc
+  curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/.vimrc" > ~/.vimrc
   echo -e "${G}Downloading complete.${E}"
   echo
   echo "Opening up vim and setting up plugins....."
@@ -62,7 +62,7 @@ then
   sleep 1
   echo "Setting up and configuring files..."
   sleep 3
-  curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/init.vim" > ~/.config/nvim/init.vim
+  curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/.vimrc" > ~/.config/nvim/init.vim
   echo -e "${G}Setup complete.${E}"
   sleep 2
 
