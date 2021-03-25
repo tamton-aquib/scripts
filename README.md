@@ -3,6 +3,7 @@
 ### Get my virmc:
 
 To set up my vimrc on ur machine, do this one-liner (or you can manually download install.sh and execute it)
+
 ```sh
 curl -s "https://raw.githubusercontent.com/tamton-aquib/scripts/main/install_vim.sh" > install.sh && bash install.sh && rm install.sh
 ```
@@ -21,8 +22,16 @@ curl -s "https://raw.githubusercontent.com/tamton-aquib/scripts/main/install_vim
 
 ### Other scripts:
 
-* `yeet.sh` is for github add, commit and push. (Its a dumb script actually.)
+* `colors.py` 
+    * grabs the color where mouse is pointed to on the screen.
+    * In hex and rgb.
+    * needs pyautogui to work (`pip3 install PyAutoGUI`)
+* `yeet.sh` 
+    * is for github add, commit and push.
+    * Its a dumb script actually.
 * `my_ip.sh` is for showing ur private and public ips.
-* `unicode_arrows.py` prints some unicode arrow characters (Sometimes i use it for terminal customization).
+* `unicode_arrows.py` 
+    * prints some unicode arrow characters.
+    * Sometimes i use it for terminal customization.
 * `wifi.sh` for connecting to wifi via command line. (fish version)
 * `imgur_upload.py` for uploading image to imgur and get corresponding link.
