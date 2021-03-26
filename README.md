@@ -33,5 +33,5 @@ curl -s "https://raw.githubusercontent.com/tamton-aquib/scripts/main/install_vim
 * `unicode_arrows.py` 
     * prints some unicode arrow characters.
     * Sometimes i use it for terminal customization.
-* `wifi.sh` for connecting to wifi via command line. (fish version)
+* `wifi.fish` for connecting to wifi via command line. (fish version)
 * `imgur_upload.py` for uploading image to imgur and get corresponding link.
