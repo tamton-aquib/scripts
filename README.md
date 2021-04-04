@@ -5,7 +5,7 @@
 To set up my vimrc on ur machine, do this one-liner (or you can manually download install.sh and execute it)
 
 ```sh
-curl -sL "https://git.io/vimconfig" > install.sh && bash install.sh && rm install.sh
+bash (curl -sL git.io/vimconfig | psub)
 ```
 <details>
 <summary>Current Plugins:</summary>
