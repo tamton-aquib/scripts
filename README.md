@@ -25,7 +25,7 @@ curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
 * `colors.py` 
     * grabs the color where mouse is pointed to on the screen.
     * In hex and rgb.
-    * needs pyautogui to work (`pip3 install PyAutoGUI`)
+    * Requirement: Tkinter.
 * `yeet.sh` 
     * is for github add, commit and push.
     * Its a dumb script actually.
