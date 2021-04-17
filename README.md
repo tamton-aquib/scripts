@@ -19,9 +19,12 @@ curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
 </ul>
 </details>
 
-
 ### Other scripts:
 
+* `translate.py`
+    * Translates other languages to english.
+    * Converts the text in clipboard.
+    * Automatically detects the language. (uses googletrans module)
 * `colors.py` 
     * grabs the color where mouse is pointed to on the screen.
     * In hex and rgb.
@@ -33,5 +36,4 @@ curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
 * `unicode_arrows.py` 
     * prints some unicode arrow characters.
     * Sometimes i use it for terminal customization.
-* `wifi.fish` for connecting to wifi via command line. (fish version)
-* `imgur_upload.py` for uploading image to imgur and get corresponding link.
+* `wifi.sh` for connecting to wifi via command line.
