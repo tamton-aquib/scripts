@@ -1,0 +1,4 @@
+
+feh --bg-scale ~/Pictures/aesthetic.png
+
+picom -f
