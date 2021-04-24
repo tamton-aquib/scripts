@@ -1,0 +1,10 @@
+#!/bin/bash
+slop=$(slop -f "%x %y %w %h %g %i") || exit 1
+read -r X Y W H G ID < <(echo $slop)
+
+(( W /= 9 ))
+(( H /= 19 ))
+
+alacritty -o window.dimensions.columns=$W, window.dimensions.lines=$H, window.position.x=$X, window.position.y=$Y
+# NICE="window.position.x=$X,window.position.y=$Y,window.dimensions.columns=$W,window.dimensions.lines=$H"
+# alacritty -o $NICE
