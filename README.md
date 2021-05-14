@@ -21,6 +21,8 @@ curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
 
 ### Other scripts:
 
+* `neofetch.sh`
+    * Tweaked version of [NerdFetch](https://github.com/ThatOneCalculator/NerdFetch).
 * `translate.py`
     * Translates other languages to english.
     * Converts the text in clipboard.

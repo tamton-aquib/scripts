@@ -10,7 +10,7 @@ get_status() {
 }
 
 get_volume() {
-    echo $(amixer get Master | grep -Po "\[[0-9]{2,3}%\]")
+    echo $(amixer get Master | grep "Right" | grep -Po "\[[0-9]{2,3}%\]")
 }
 
 get_net_state() {
@@ -25,7 +25,7 @@ get_net_state() {
 
 while true
 do
-    STATUS=" $(get_net_state) ┃ $(get_volume) ┃ $(get_status)"
+    STATUS=" $(get_net_state) ┃  $(get_volume) ┃ $(get_status)  "
     xsetroot -name "$STATUS"
     sleep 1m;
 done &
