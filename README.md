@@ -34,7 +34,8 @@ curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
 * `yeet.sh` 
     * is for github add, commit and push.
     * Its a dumb script actually.
-* `my_ip.sh` is for showing ur private and public ips.
+* `my_ip.sh`
+	* for showing private and public ips.
 * `unicode_arrows.py` 
     * prints some unicode arrow characters.
     * Sometimes i use it for terminal customization.
