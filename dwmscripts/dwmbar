@@ -4,7 +4,6 @@ get_datetime() {
     date +" %a %d-%b %I:%M %p"
 }
 
-
 get_status() {
     echo "$(get_datetime)";
 }
@@ -13,8 +12,12 @@ get_volume() {
     echo $(amixer get Master | grep "Right" | grep -Po "\[[0-9]{2,3}%\]")
 }
 
+get_wifi_name() {
+	echo $(nmcli d wifi list | grep -P "\*" | awk '{print $3}')
+}
+
 get_net_state() {
-    STATE=$(cat /sys/class/net/wlan0/operstate)
+    STATE=$(cat /sys/class/net/wlp2s0/operstate)
     if [ $STATE == "up" ]
     then
         printf " "
@@ -25,7 +28,7 @@ get_net_state() {
 
 while true
 do
-    STATUS=" $(get_net_state) ┃  $(get_volume) ┃ $(get_status)  "
+    STATUS=" $(get_wifi_name) $(get_net_state) ┃  $(get_volume) ┃ $(get_status)  "
     xsetroot -name "$STATUS"
     sleep 1m;
 done &
