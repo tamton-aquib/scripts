@@ -27,13 +27,14 @@ curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
     * Translates other languages to english.
     * Converts the text in clipboard.
     * Automatically detects the language. (uses googletrans module)
+*	`vim_startup.py`
+	* To get nvim startuptime.
+	* Along with plugin-timings.
+	* looks for paq directory for profiling plugin startuptime.
 * `colors.py` 
     * grabs the color where mouse is pointed to on the screen.
     * In hex and rgb.
     * Requirement: Tkinter.
-* `yeet.sh` 
-    * is for github add, commit and push.
-    * Its a dumb script actually.
 * `my_ip.sh`
 	* for showing private and public ips.
 * `unicode_arrows.py` 
