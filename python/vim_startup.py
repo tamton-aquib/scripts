@@ -27,9 +27,10 @@ def get_file_contents():
 		try:
 			item_time = float(item_time[:-1]) if item_time.endswith(':') else float(item_time)
 			total_time += item_time
-		except:continue
-		if 'paq' in item_name:
-			plug_name = re.findall(r"paqs/start/(.+?)/.+?/", item_name)[0]
+		except: continue
+		if 'packer' in item_name:
+			plug_name = re.findall(r"packer/start/(.+?)/.+?/", item_name)
+			plug_name = plug_name[0] if plug_name else "packer_compiled.vim"
 			plugs_total += f"{str(item_time).ljust(8)} : {plug_name}\n"
 
 	prettify_result(total_time, plugs_total)

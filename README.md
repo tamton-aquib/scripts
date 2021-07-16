@@ -1,8 +1,8 @@
 # Some scripts I use.
 
-### Get my virmc:
+### Get a minimal virmc:
 
-To set up my vimrc on ur machine, do this one-liner (or you can manually download install.sh and execute it)
+A oneliner to set up a minimal vimrc on ur machine (another way is to manually download install.sh and execute it)
 
 ```sh
 curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
@@ -21,23 +21,31 @@ curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
 
 ### Other scripts:
 
+#### Bash
+
 * `neofetch.sh`
-    * Tweaked version of [NerdFetch](https://github.com/ThatOneCalculator/NerdFetch).
+	* Tweaked version of [NerdFetch](https://github.com/ThatOneCalculator/NerdFetch).
+* `my_ip.sh`
+	* for showing private and public ips.
+* `wifi.sh` 
+	* for connecting to wifi via command line.
+
+#### Python
+* `ettu_tools.py`
+	* This baby is used for bruteforcing zip,pdf or hash(md5,sha256,etc)
+	* Requirement: pikepdf, zipfile
 * `translate.py`
-    * Translates other languages to english.
-    * Converts the text in clipboard.
-    * Automatically detects the language. (uses googletrans module)
-*	`vim_startup.py`
+	* Translates other languages to english.
+	* Converts the text in clipboard.
+	* Automatically detects the language. (uses googletrans module)
+* `vim_startup.py`
 	* To get nvim startuptime.
 	* Along with plugin-timings.
 	* looks for paq directory for profiling plugin startuptime.
 * `colors.py` 
-    * grabs the color where mouse is pointed to on the screen.
-    * In hex and rgb.
-    * Requirement: Tkinter.
-* `my_ip.sh`
-	* for showing private and public ips.
+	* grabs the color where mouse is pointed to on the screen.
+	* In hex and rgb.
+	* Requirement: Tkinter.
 * `unicode_arrows.py` 
-    * prints some unicode arrow characters.
-    * Sometimes i use it for terminal customization.
-* `wifi.sh` for connecting to wifi via command line.
+	* prints some unicode arrow characters.
+	* Sometimes i use it for terminal customization.
