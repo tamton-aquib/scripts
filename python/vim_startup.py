@@ -2,6 +2,7 @@
 import subprocess as sub
 import os
 import re
+# NOTE: This is not working quite as expected as the `-q` just after startup behaves differently.
 
 def check_vimlog():
 	if 'vim.log' in os.listdir('.'):

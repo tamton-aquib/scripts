@@ -5,7 +5,7 @@
 A oneliner to set up a minimal vimrc on ur machine (another way is to manually download install.sh and execute it)
 
 ```sh
-curl -sL git.io/vimconfig > install.sh && bash install.sh && rm install.sh
+curl -sL git.io/vim_install > install.sh && bash install.sh && rm install.sh
 ```
 <details>
 <summary>Current Plugins:</summary>

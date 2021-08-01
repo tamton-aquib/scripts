@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import hashlib, pikepdf, zipfile
 import sys, time
+# NOTE: these functions were taken from https://github.com/taj0023
 
 R, G, B, E = "\033[31m", "\033[32m", "\033[36m", "\033[0m"
 
@@ -33,7 +34,7 @@ def ettuh():
 		elif len(filename) == 56:
 			digest = hashlib.sha224(enc_wrd).hexdigest().lower()
 		else:
-			print("Meh")
+			print("Hashtype not included in md5, sha1, sha224, sha256, sha384, sha512")
 			break
 
 		if digest == filename:
@@ -58,7 +59,13 @@ def ettuz():
 			time.sleep(0.0001)
 
 if len(sys.argv) <= 3:
-	print("Usage: ettuh.py (zip|hash|pdf) filename/hash dictionary")
+	print(
+	f"""
+Usage: python3 ettu_tools.py (zip|hash|pdf) filename/hash dictionary
+
+Example: {G}python3 ettu_tools.py zip ~/Downloads/filename.zip /opt/dictionary.txt{E}
+	""".strip()
+	)
 	sys.exit()
 
 filename = sys.argv[2]

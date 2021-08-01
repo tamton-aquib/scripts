@@ -77,9 +77,6 @@ then
   echo -e "${G}Setup Complete.${E}"
   echo "colorscheme sonokai" >> ~/.config/nvim/init.vim
 
-
-
-
 else
-  echo -e "\033[91mEnter valid vim version. (Currently gvim not supported.)\033[0m"
+  echo -e "\033[91mEnter valid vim version. \033[0m"
 fi
