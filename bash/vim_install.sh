@@ -1,82 +1,32 @@
 #!/bin/bash
 
-# Below command is for swapping Esc and caps key (Works perfectly on ubuntu)
-# setxkbmap -option caps:swapescape 
-
-# COLORS
-
 R="\033[91m"
 G="\033[92m"
 E="\033[0m"
 
-echo
-echo -e "${G}Welcome to configuring your vimrc${E}"
-echo "--------------------------------"
-echo
-
 read -p "Which vim are you using? [vim/nvim]: " VIM_VERSION
-echo
-
-if [[ -z "$VIM_VERSION" ]]
-then
-  echo 'Usage: "./install.sh vim/nvim"'
-  exit
-fi
-
+read -p ""
 
 #### VIM ####
-if [[ "$VIM_VERSION" == "vim" ]]
-then
-  echo -e "${G}You have selected vanilla vim.${E}"
-  echo -e "Setting Up Plug manager for vim..."
-  sleep 2 # For effect :)
-
-  curl -s -Lo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  echo -e "${G}Setup complete.${E}"
-  echo
-  sleep 1
-  echo "Downloading contents and settings from github....[18.5KB]"
-  sleep 2
-  curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/.vimrc" > ~/.vimrc
-  echo -e "${G}Downloading complete.${E}"
-  echo
-  echo "Opening up vim and setting up plugins....."
-  echo "Plugin Setup complete."
-  sleep 3
-  vim -c ":PlugInstall"
-  echo "colorscheme sonokai" >> ~/.vimrc
+if [[ "$VIM_VERSION" == "vim" ]] then
+	curl -s -Lo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/.vimrc" > ~/.vimrc
+	vim -c ":PlugInstall"
+	echo "colorscheme onedark" >> ~/.vimrc
 
 #### NVIM ####
-elif [[ "$VIM_VERSION" == "nvim" ]]
-then
-  echo -e "${G}You have selected neovim.${E}"
-  sleep 1
-
-  sh -c 'curl -s -Lo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  mkdir -p ~/.config/nvim
-  echo
-  echo "Downloading config file from github."
-  sleep 3
-  echo -e "${G}Downloaded 18.5kB.${E}"
-  echo
-  sleep 1
-  echo "Setting up and configuring files..."
-  sleep 3
-  curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/.vimrc" > ~/.config/nvim/init.vim
-  echo -e "${G}Setup complete.${E}"
-  sleep 2
-
-  echo
-  echo -e "Opening neovim and setting up ${G}Plugins${E}"
-  sleep 2
-
-  nvim -c "echo 'Installing Plugins(Usually takes below 30s.)' | :PlugInstall"
-
-  echo -e "${G}Setup Complete.${E}"
-  echo "colorscheme sonokai" >> ~/.config/nvim/init.vim
+elif [[ "$VIM_VERSION" == "nvim" ]] then
+	read -p "VimL config or lua [viml/lua]: " VIM_OR_LUA
+	if [[ "$VIM_OR_LUA" == "vim" ]] then
+		curl -s -Lo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+		mkdir -p ~/.config/nvim
+		curl -s "https://raw.githubusercontent.com/tamton-aquib/dotfiles/main/.vimrc" > ~/.config/nvim/init.vim
+		nvim -c "echo 'Installing Plugins (Usually takes around 30s.)' | :PlugInstall"
+		echo "colorscheme onedark" >> ~/.config/nvim/init.vim
+	else
+		curl -sL git.io/tajvim | bash
+	fi
 
 else
-  echo -e "\033[91mEnter valid vim version. \033[0m"
+	echo -e "${R}Enter valid vim version.${E}"
 fi
