@@ -31,9 +31,6 @@ curl -sL git.io/vim_install > install.sh && bash install.sh && rm install.sh
 	* for connecting to wifi via command line.
 
 #### Python
-* `ettu_tools.py`
-	* This baby is used for bruteforcing zip,pdf or hash(md5,sha256,etc)
-	* Requirement: pikepdf, zipfile
 * `ctf.py`
 	* Has 2 functions (for now).
 	* morse and rot(caesar).
