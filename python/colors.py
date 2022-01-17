@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 import pyautogui as pog
 import pyperclip
-from tkinter import *
+from tkinter import Tk,Label,Button
 
 root = Tk()
 label = Label(root, text="Click to copy the color").pack()
 
 x, y = pog.position()
-r, g, b = tuple(pog.pixel(x, y))
+r, g, b = pog.pixel(x, y)
 
 rgb_color = f"({r},{g},{b})"
 hex_color = f"#{r:02x}{g:02x}{b:02x}"
