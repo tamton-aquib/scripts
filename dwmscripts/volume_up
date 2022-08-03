@@ -1,8 +1,9 @@
 #!/bin/bash
 
-amixer set Master 10%+ 2>/dev/null
-
-# SLEEP="$(pidof sleep)"
-# kill "$SLEEP" 2>/dev/null
-SLEEP="$(ps -ejH | grep dwmbar -A1 | grep sleep | awk '{print $1}')"
-kill "$SLEEP"
+if [[ "$1" == "up" ]]
+then
+    amixer set Master 10%+ 2>/dev/null
+elif [[ "$1" == "down" ]]
+then
+    amixer set Master 10%- 2>/dev/null
+fi
