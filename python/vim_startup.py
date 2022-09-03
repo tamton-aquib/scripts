@@ -3,16 +3,17 @@ import subprocess as sub
 import os
 import re
 # NOTE: This is not working quite as expected as the `-q` just after startup behaves differently.
+# NOTE: a lot has changed in neovim so this might not work exactly
 
 def check_vimlog():
 	if 'vim.log' in os.listdir('.'):
 		sub.run('rm vim.log'.split())
 
 def prettify_result(time, plugs_total):
-	nice = "\033[31m" if time > 200 else "\033[32m"
+	color = "\033[31m" if time > 200 else "\033[32m"
 	END = "\033[0m"
 	print("=========================")
-	print(f"{nice}{str(round(time, 2)).center(23)}{END}")
+	print(f"{color}{str(round(time, 2)).center(23)}{END}")
 	print("=========================")
 	print(plugs_total)
 
