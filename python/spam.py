@@ -1,13 +1,13 @@
+#!/usr/bin/env python3
+
 import pyautogui as pog
-from time import sleep
+import sys, time
 
-words = """
-This is spamming script from maxcodez. Type the words here to spam
-"""
+words = "nice" if len(sys.argv) <= 2  else sys.argv[1]
 
-sleep(3) # 3 seconds to get ready before boom
+time.sleep(3)
 
-for word in words.strip().split():
-    pog.write(word)
+for i in range(3 if len(sys.argv) <= 3 else int(sys.argv[2])):
+    pog.write(words)
     pog.press("enter")
-    sleep(0.5)
+    time.sleep(0.5)

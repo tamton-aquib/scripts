@@ -4,6 +4,7 @@ import os
 import re
 # NOTE: This is not working quite as expected as the `-q` just after startup behaves differently.
 # NOTE: a lot has changed in neovim so this might not work exactly
+# FIX: this script is old as neovim 0.3 so wont work anymore
 
 def check_vimlog():
 	if 'vim.log' in os.listdir('.'):

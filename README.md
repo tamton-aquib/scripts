@@ -19,7 +19,7 @@ curl -sL git.io/vim_install | bash
 	* for connecting to wifi via command line.
 
 #### Python
-* `ctf.py`
+* `ctf.py` (❗ This was removed in favour of [ice](https://github.com/tamton-aquib/ice))
 	* Has 2 functions (for now).
 	* morse and rot(caesar).
 	* Usage: `python3 ctf.py rot/morse "The_String"`
@@ -27,7 +27,7 @@ curl -sL git.io/vim_install | bash
 	* Translates other languages to english.
 	* Converts the text in clipboard.
 	* Automatically detects the language. (uses googletrans module)
-* `vim_startup.py`
+* `vim_startup.py` (❗ Probably wont work anymore as this was from nvim 0.3)
 	* To get nvim startuptime.
 	* Along with plugin-timings.
 	* looks for paq directory for profiling plugin startuptime.
