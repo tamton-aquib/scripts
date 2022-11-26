@@ -38,3 +38,6 @@ curl -sL git.io/vim_install | bash
 * `unicode_arrows.py` 
 	* prints some unicode arrow characters.
 	* Sometimes i use it for terminal customization.
+* `gh.py`
+    * github related commands.
+    * `issues/pr`, `follow`
