@@ -43,8 +43,12 @@ def issues():
     print("-  Issues/PRs  -")
     print("\n".join(issues))
 
+def stars():
+    repos = requests.get("https://api.github.com/users/tamton-aquib/repos").json()
+    print(sum([repo['stargazers_count'] for repo in repos]))
+
 _, command, *username = sys.argv
 if not command: print("Enter a command. (issues/follow)"); sys.exit(1)
 username = username[0] if len(username)>0 else input("Enter username: ").strip()
 
-{'issues': issues, 'follow': follow, 'pr': issues}[command]()
+{'issues': issues, 'follow': follow, 'pr': issues, 'stars': stars}[command]()
